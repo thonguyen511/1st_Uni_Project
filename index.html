@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="img/eco-home.png" type="image/icon type">
+	<title>My IoT Dashboard</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/70e0ddc3b9.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="wrapper_inner">
+			<div class="vertical_wrap">
+				<div class="backdrop"></div>
+				<div class="vertical_bar">
+					<div class="profile_info">
+						<div class="img_holder">
+							<img src="img/climate.png" alt="profile_pic">
+						</div>
+						<p class="title">IOT GARDEN</p>
+						<p class="sub_title">Welcome Back</p>
+					</div>
+					<ul class="menu">
+						<li><div href="#" class="tab-item active">
+							<span class="icon"><img src="img/remote-control.png" alt=""></span>
+							<span class="text">Controller</span>
+						</div></li>
+						<li><div href="#" class="tab-item">
+							<span class="icon"><img src="img/graph.png" alt=""></span>
+							<span class="text">History</span>
+						</div></li>
+					</ul>
+
+					<ul class="social">
+						<li><a href="#"><i class="fa-regular fa-bell"></i></a></li>
+						<li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+						<li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_container">
+				<div class="top_bar">
+					<div class="hamburger">
+						<i class="fas fa-bars"></i>
+					</div>
+					<div class="logo">
+						My <span>Dashboard</span>
+					</div>
+				</div>
+				<div class="container">
+					<div class="tab-content">
+						<!-- CONTROLLER TAB -->
+						<div class="tab-pane active">
+							<div class="mini-container"> 					<!--1-->
+								<div class="weather-widget">
+									<div class="panel" id="left">
+										<div id="timedate">
+											<span id="mon">January</span>
+											<span id="day">1</span>,
+											<span id="year">0</span><br />
+											<span id="hour">12</span> :
+											<span id="minute">00</span>:
+											<span id="second">00</span>
+										  </div>
+										<div class="location">
+											<div class="city">
+												<p>Ho Chi Minh</p>
+												<p>city</p>
+											</div>
+											<div class="cloud">
+												<img src="img/clouds-and-sun.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="hum">
+										<img src="img/humidity.png" alt=""><p> humidity : </p><span id="hum">1</span> <p>%</p>
+									</div>
+									<div class="temp">
+										<img src="img/thermometer.png" alt=""><p>Air temperature : </p><span id="temp">1</span> <p>°C</p>
+									</div>
+									<div class="brightness">
+										<img src="img/brightness.png" alt=""><p>Brightness </p><span id="brightness">low</span> 
+									</div>
+								</div>
+							</div>
+							<!--  -->
+							<div class="mini-container"> 					<!--2-->
+								<div class="control">
+									<div class="pump-slider">						
+										<div class="container-slider">
+										<img src="img/alarm-clock.png" alt="">
+										<input type="range" min="0" max="23" step="1" value="" id="clock">
+										<div class="val" id="clock-result">0</div>
+										</div>
+									</div>				
+									<div class="devices">
+										<div class="motor">
+											<img id="motorImage" alt="">
+											<p>Pump</p>
+											<div class="sw">
+												<div class="toggle"></div>
+											</div>
+										</div>
+										<div class="bulb">
+											<img id="bulbimg" alt="">
+											<p>bulb</p>
+											<div class="sw2">
+												<div class="toggle2"></div>
+											</div>
+										</div>
+										<div class="fan">
+											<img id="fanimg" alt="">
+											<p>fan</p>
+											<div class="sw3">
+												<div class="toggle3"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="warning">
+										<img src="img/warning.png" alt="">
+										<div class="sw4">
+											<div class="toggle4"></div>
+										</div>
+										<img src="img/warning.png" alt="">
+								</div>
+							</div>
+							<!--  -->
+						</div>
+						<!-- END CONTROLLER TAB -->
+
+						<!-- HISTORY TAB -->
+						<div class="tab-pane">
+							
+						</div>
+						<!-- END HISTORY TAB -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
